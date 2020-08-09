@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试界面</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        input,body,table,tr,td{
+            padding: 0px;
+            height: 100%;
+        }
+
+        input {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            height: 30px;
+        }
+
+        body{
+            align-items: center;
+        }
+        #largeDiv{
+            width: 100%;
+        }
+        #middleDiv{
+            width: 80%;
+        }
+        table{
+            margin: 10px;
+        }
+        td{
+            text-align: right;
+            border:1px solid black;
+            margin: 0px;
+            padding: 0px;
+            border-collapse:collapse;
+
+        }
+        th{
+            border:1px solid black;
+            height: 35px;
+        }
+        h4{
+            text-align: left;
+            margin-bottom: 0px;
+        }
+        .textErea{
+            padding-right: 1%;
+        }
+        .num{
+            text-align: center;
+        }
+        #addRow{
+            width: 50%;
+        }
+        #addTable input{
+            text-align: center
+        }
+        select{
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="largeDiv" align="center">
+    <div id = "middleDiv">
+        <div>
+            <h4>请填写 IP ，端口号(例：http://127.0.0.1:8080)</h4>
+
+            <table width="100%" cellpadding="0px" cellspacing="0px" id="table1">
+                <tr>
+                    <th width="10%">序号</th>
+                    <th width="90%">IP/PORT/CONTROLLER</th>
+                </tr>
+                <tr>
+                    <td class="num">1</td>
+                    <td><input type="text" name="" id="ip1"></td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td><input type="text" name="" id="ip2"></td>
+                </tr>
+                <tr>
+                    <td class="num">3</td>
+                    <td><input type="text" name="" id="ip3"></td>
+                </tr>
+                <tr>
+                    <td class="num">4</td>
+                    <td><input type="text" name="" id="ip4"></td>
+                </tr>
+                <tr>
+                    <td class="num">5</td>
+                    <td><input type="text" name="" id="ip5"></td>
+                </tr>
+                <tr>
+                    <td class="num">6</td>
+                    <td><input type="text" name="" id="ip6"></td>
+                </tr>
+                <tr>
+                    <td class="num">7</td>
+                    <td><input type="text" name="" id="ip7"></td>
+                </tr>
+                <tr>
+                    <td class="num">8</td>
+                    <td><input type="text" name="" id="ip8"></td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+        <div>
+            <h4>请填写 controller(例：/controller/method.do)</h4>
+            <table width="100%">
+                <tr>
+                    <td>
+                        <input type="text"  name="" id="controller">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+        <div>
+            <h4>txt文件绝对路径</h4>
+            <table width="100%">
+                <tr>
+                    <td><input type="text" name="" id= "file" ></td>
+                </tr>
+            </table>
+        </div>
+        <div class="container">
+            <h4>请填写参数信息</h4>
+            <table  width="100%" cellpadding="0px" cellspacing="0px">
+                <tr>
+                    <th>key</th>
+                    <th>value</th>
+                    <th>key</th>
+                    <th>value</th>
+
+                </tr>
+                <tr>
+                    <td width="17%" class="textErea">first</td>
+                    <td width="33%"><input type="text" name="" id="first"></td>
+                    <td width="17%" class="textErea">msgFlag</td>
+                    <td width="33%"><input type="text" name="" id="msgFlag"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">flt</td>
+                    <td><input type="text" name="" id="flt"></td>
+                    <td class="textErea">labelId</td>
+                    <td><input type="text" name="" id="labelId"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">labelType</td>
+                    <td><input type="text" name="" id="labelType"></td>
+                    <td class="textErea">inserial</td>
+                    <td><input type="text" name="" id="inserial"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">incomeNbr</td>
+                    <td><input type="text" name="" id="incomeNbr"></td>
+                    <td class="textErea">staffno</td>
+                    <td><input type="text" name="" id="staffno"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">nbr</td>
+                    <td><input type="text" name="" id="nbr"></td>
+                    <td class="textErea">certificateNo</td>
+                    <td><input type="text" name="" id="certificateNo"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">localnet</td>
+                    <td><input type="text" name="" id="localnet"></td>
+                    <td class="textErea">areaCode</td>
+                    <td><input type="text" name="" id="areaCode"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">custId</td>
+                    <td><input type="text" name="" id="custId"></td>
+                    <td class="textErea">productId</td>
+                    <td><input type="text" name="" id="productId"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">productOfferId</td>
+                    <td><input type="text" name="" id="productOfferId"></td>
+                    <td class="textErea">productOfferInstanceId</td>
+                    <td><input type="text" name="" id="productOfferInstanceId"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">acctId</td>
+                    <td><input type="text" name="" id="acctId"></td>
+                    <td class="textErea">servId</td>
+                    <td><input type="text" name="" id="servId"></td>
+                </tr>
+                <tr>
+                    <td class="textErea">diffNetwork</td>
+                    <td><input type="text" name="" id="diffNetwork"></td>
+                    <td class="textErea">classType</td>
+                    <td><input type="text" name="" id="classType"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h4>请填写校验信息</h4>
+            <table width="100%" id = "addTable" cellpadding="0px" cellspacing="0px">
+                <tr>
+                    <!-- <th width="20%">对应的ip端口及controller序号</th> -->
+                    <th width="50%">元素唯一标识(id)</th>
+                    <th width="50%">table ID</th>
+                </tr>
+                <tr id="row1">
+                    <!-- <td>
+                      <select>
+                        <option value=""></option>
+                        <option value="ip1">1</option>
+                        <option value="ip2">2</option>
+                        <option value="ip3">3</option>
+                        <option value="ip4">4</option>
+                        <option value="ip5">5</option>
+                        <option value="ip6">6</option>
+                        <option value="ip7">7</option>
+                        <option value="ip8">8</option>
+                      </select>
+                    </td> -->
+                    <td><input type="text" name="" id=""></td>
+                    <td><input type="text" name="" id=""></td>
+                </tr>
+
+            </table>
+            <input type="button" name="" value = "添加规则" id = "addRow">
+            <p></p>
+            <input type="button" name="" value="测试链接" id = "check">
+        </div>
+
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+
+    //动态添加表格行数
+    $("#addRow").click(function(){
+        var $td = $("#row1").clone();       //增加一行,克隆第一个对象
+        // $td.attr("id","row"+count);
+        // count = count +1;
+        $("#addTable").append($td);
+        $("table tr:last").find(":input").val('');   //将尾行元素克隆来的保存的值清空
+
+    });
+
+    //获取动态表格数据
+    function idAndReg(){
+        var map = {};
+        var tb = document.getElementById("addTable");    // table 的 id
+        var rows = tb.rows;                           // 获取表格所有行
+        for(var i = 1; i<rows.length; i++ ){
+            var objInputs = rows[i].getElementsByTagName("input");
+            var id = objInputs[0].value;   //id值
+            var tableId = objInputs[1].value;  //正则表达式
+            map[id] = tableId;
+        }
+        return map;
+    }
+
+    //获取参数信息
+    function getParam(){
+        var param = "?";
+        var first = $("#first").val();
+        if(first != null && first != ""){
+            param = param + "first="+first+"&";
+        }
+        var msgFlag = $("#msgFlag").val();
+        if(msgFlag != null && msgFlag != ""){
+            param = param+"msgFlag="+ msgFlag +"&";
+
+        }
+        var flt = $("#flt").val();
+        if(flt != null && flt != ""){
+            param = param + "flt="+flt +"&";
+        }
+        var labelId = $("#labelId").val();
+        if(labelId != null && labelId != ""){
+            param = param + "labelId="+labelId +"&";
+        }
+        var labelType = $("#labelType").val();
+        if(labelType != null && labelType != ""){
+            param = param + "labelType="+labelType +"&";
+        }
+        var inserial = $("#inserial").val();
+        if(inserial != null && inserial != ""){
+            param = param + "inserial="+inserial +"&";
+        }
+        var incomeNbr = $("#incomeNbr").val();
+        if(incomeNbr != null && incomeNbr != ""){
+            param = param + "incomeNbr="+incomeNbr +"&";
+        }
+        var staffno = $("#staffno").val();
+        if(staffno != null && staffno != ""){
+            param = param + "staffno="+staffno +"&";
+        }
+        var nbr = $("#nbr").val();
+        if(nbr != null && nbr != ""){
+            param = param + "nbr="+nbr +"&";
+        }
+        var certificateNo = $("#certificateNo").val();
+        if(certificateNo != null && certificateNo != ""){
+            param = param + "certificateNo="+certificateNo +"&";
+        }
+        var localnet = $("#localnet").val();
+        if(localnet != null && localnet != ""){
+            param = param + "localnet="+localnet +"&";
+        }
+        var areaCode = $("#areaCode").val();
+        if(areaCode != null && areaCode != ""){
+            param = param + "areaCode="+areaCode +"&";
+        }
+        var custId = $("#custId").val();
+        if(custId != null && custId != ""){
+            param = param + "custId="+custId +"&";
+        }
+        var productId = $("#productId").val();
+        if(productId != null && productId != ""){
+            param = param + "productId="+productId +"&";
+        }
+        var productOfferId = $("#productOfferId").val();
+        if(productOfferId != null && productOfferId != ""){
+            param = param + "productOfferId="+productOfferId +"&";
+        }
+        var productOfferInstanceId = $("#productOfferInstanceId").val();
+        if(productOfferInstanceId != null && productOfferInstanceId != ""){
+            param = param + "productOfferInstanceId="+productOfferInstanceId +"&";
+        }
+        var acctId = $("#acctId").val();
+        if(acctId != null && acctId != ""){
+            param = param + "acctId="+acctId +"&";
+        }
+        var servId = $("#servId").val();
+        if(servId != null && servId != ""){
+            param = param + "servId="+servId +"&";
+        }
+        var diffNetwork = $("#diffNetwork").val();
+        if(diffNetwork != null && diffNetwork != ""){
+            param = param + "diffNetwork="+diffNetwork +"&";
+        }
+        var classType = $("#classType").val();
+        if(classType != null && classType != ""){
+            param = param + "classType="+classType +"&";
+        }
+        return param;
+    }
+
+    // function fileInfo(){
+    //     var objFile = document.getElementById("file");
+    //     console.log(objFile);
+    //     var url1 = objFile.formAction;
+    //     return url1;
+    // }
+    $("#file").change(function(){
+        var objFile = document.getElementById("file");
+        console.log(objFile);
+        var url1 = objFile.formAction;
+        return url1;
+
+    });
+
+    $("#check").click(function(){
+
+        var map1 = idAndReg();  //存校验规则
+        var map2 = {};  //存 ip
+        var param = getParam();
+
+        var controller = $("#controller").val();
+        if(controller!=undefined && controller!=null && controller!=""){
+            controller = "/"+controller;
+        }
+        //拼接 url 开始
+        var ip1 = $("#ip1").val();
+        if( ip1 != null && ip1 != "" && ip1 != undefined){
+            ip1 = ip1 +controller+ param ;
+            map2["ip1"] = ip1;
+        }
+        var ip2 = $("#ip2").val();
+        if( ip2 != null && ip2 != "" && ip2 != undefined){
+            ip2 = ip2 + controller +param ;
+            map2["ip2"] = ip2;
+
+        }
+        var ip3 = $("#ip3").val();
+        if( ip3 != null && ip3 != "" && ip3 != undefined){
+            ip3 = ip3 + controller+param ;
+            map2["ip3"] = ip3;
+        }
+        var ip4 = $("#ip4").val();
+        if( ip4 != null && ip4 != "" && ip4 != undefined){
+            ip4 = ip4 +controller +param ;
+            map2["ip4"] = ip4;
+        }
+        var ip5 = $("#ip5").val();
+        if( ip5 != null && ip5 != "" && ip5 != undefined){
+            ip5 = ip5 +controller +param ;
+            map2["ip5"] = ip5;
+        }
+        var ip6 = $("#ip6").val();
+        if( ip6 != null && ip6 != "" && ip6 != undefined){
+            ip6 = ip6 + controller+param ;
+            map2["ip6"] = ip6;
+        }
+        var ip7 = $("#ip7").val();
+        if( ip7 != null && ip7 != "" && ip7 != undefined){
+            ip7 = ip7 + controller+param ;
+            map2["ip7"] = ip7;
+        }
+        var ip8 = $("#ip8").val();
+        if( ip8 != null && ip8 != "" && ip8 != undefined){
+            ip8 = ip8 +controller+ param ;
+            map2["ip8"] = ip8;
+        }
+        //拼接 url 结束
+        //map 转 json
+        var strMap1 = JSON.stringify(map1);
+        var strMap2 = JSON.stringify(map2);
+        //获取文件绝对地址
+        // var objFile = document.getElementById("file");
+        // console.log(objFile);
+        //var urlPath = fileInfo();
+        var urlPath = $("#file").val();
+
+        $.ajax({
+            type: "post" ,
+            url: "../checkUrl",
+            data: {
+                map1 : strMap1 ,
+                map2 : strMap2 ,
+                urlPath : urlPath
+            },
+            success: function(data){
+                alert(data);
+            },
+            error:function(data){
+
+            }
+        });
+
+
+
+
+    });
+</script>
+
+</html>
